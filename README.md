@@ -6,6 +6,7 @@ Please file bugs at [Bugzilla][bugzilla] under product Socorro
 
 Or, fork and send us a pull request!
 
+
 [django]: http://www.djangoproject.com/
 [gh-playdoh]: https://github.com/mozilla/playdoh
 [gh-socorro]: https://github.com/mozilla/socorro
