@@ -122,6 +122,9 @@ $(document).ready(function () {
                       '&signature=' + signature;
 
             $.getJSON(url, {type: type}, function(json) {
+                if (!json) {
+                    return;
+                }
                 var report = '<h3>' + json.reason + '</h3>';
                 report += json.load.split("\n").join("<br>");
                 row.find('.' + type).html(report);
@@ -154,6 +157,9 @@ $(document).ready(function () {
                       '&' + SocReport.path + '&platforms=' + encodeURI(osname),
             function (json) {
                 $('.correlation-cell .top span').html('');
+                if (!json) {
+                    return;
+                }
                 $.each(json.hits, function(i, sig) {
                     var sig = json.hits[i];
                     $('.signature').each(function() {
